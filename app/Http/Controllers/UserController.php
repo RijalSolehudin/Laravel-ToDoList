@@ -30,11 +30,18 @@ class UserController extends Controller
 
         if($this->userService->login($email, $password)){
             $request->session()->put('user_email', $email);
-            return redirect('/home')->with('message', 'Login successful.');
+            return redirect('/')->with('message', 'Login successful.');
         } 
         
         return redirect('/login')->withErrors(['error' => 'Invalid credentials.']);
         
 
+    }
+
+    public function doLogout(Request $request)
+    {
+        // $this->userService->logout();
+        $request->session()->forget('user_email');
+        return redirect('/login')->with('message', 'Logged out successfully.');
     }
 }

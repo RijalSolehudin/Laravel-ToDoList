@@ -8,7 +8,7 @@ Class UserServiceImpl implements UserService
 { 
 
     private array $users = [
-        "rijal" => "password123",
+        "rijal@gmail.com" => "password123",
     ];
     public function register(array $data) :array
     {

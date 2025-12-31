@@ -81,11 +81,11 @@
                 </button>
             </form>
 
-            <div class="mt-8 text-center">
+            {{-- <div class="mt-8 text-center">
                 <p class="text-white/80">Don't have an account?
                     <a href="{{ route('register') }}" class="text-white font-semibold hover:underline">Sign up</a>
                 </p>
-            </div>
+            </div> --}}
         </div>
     </div>
 
